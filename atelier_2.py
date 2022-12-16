@@ -57,14 +57,13 @@ set_0(set_01,set_02)
 
 
 def creerl_1(list,dict):
+    l = []
     for i in list:
-        for j in dict:
-            if i == dict[j]:
-                break
-            else: #check si l'elemnt du list donnee = valeur de cle
-                list.remove(i)
-                break
-                  #sinon supprimer 
+        if i in dict.values(): 
+            l.append(i)
+    list.clear()
+    for i in l:
+        list.append(i)
     print(list)
 
 #Exemple
